@@ -13,4 +13,23 @@
     <hr>
     <a href="{% url 'post_update' post.pk %}">Editar Post</a> | 
     <a href="{% url 'post_delete' post.pk %}">Apagar Post</a>
+
+    <hr>
+    <h3>Comentários</h3>
+
+    <p><a href="{% url 'add_comment_to_post' post.pk %}">Adicionar Comentário</a></p>
+    <br>
+
+    {% for comment in post.comments.all %}
+        <article class="comment">
+            <p>
+                <strong>{{ comment.autor.username }}</strong> 
+                em <span>{{ comment.data_postagem|date:"d M Y" }}</span>
+            </p>
+            <p>{{ comment.texto|linebreaks }}</p>
+        </article>
+    {% empty %}
+        <p>Ainda não há comentários.</p>
+    {% endfor %}
+
 {% endblock %}
