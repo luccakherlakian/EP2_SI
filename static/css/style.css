@@ -1,0 +1,133 @@
+/* Estilo do container de cards (list.html) */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha */
+    justify-content: space-between;
+}
+
+/* Estilo de cada card (list.html) */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    width: 30%; /* Três cards por linha em telas grandes */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card h3 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.card h3 a:hover {
+    text-decoration: underline;
+}
+
+/* Regra aplicada em telas com 768px de largura ou menos */
+@media (max-width: 768px) {
+
+    /* 1. Faz o header (logo e menu) ficar vertical */
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        padding-left: 0; /* Remove o padding da lista */
+    }
+
+    /* 2. Faz os cards de competição ocuparem 100% da largura */
+    .card {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* 3. Centraliza o conteúdo principal e do rodapé */
+    main, header {
+        width: 90%; /* Usa 90% da tela em vez de 80% */
+    }
+}/* --- Estilos Base (Seção 2.8) --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+main {
+    width: 80%;
+    margin: 0 auto;
+    flex: 1;
+}
+footer {
+    display: flex;
+    justify-content: center;
+}
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Estilos do Portfólio (Fase 3) --- */
+
+/* Estilo do container de cards (list.html) */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha */
+    justify-content: space-between;
+}
+
+/* Estilo de cada card (list.html) */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    width: 30%; /* Três cards por linha em telas grandes */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card h3 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.card h3 a:hover {
+    text-decoration: underline;
+}
+
+/* --- REQUISITO DE RESPONSIVIDADE (R7) --- */
+
+/* Regra aplicada em telas com 768px de largura ou menos */
+@media (max-width: 768px) {
+
+    /* 1. Faz o header (logo e menu) ficar vertical */
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        padding-left: 0; /* Remove o padding da lista */
+    }
+
+    /* 2. Faz os cards de competição ocuparem 100% da largura */
+    .card {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* 3. Centraliza o conteúdo principal e do rodapé */
+    main, header {
+        width: 90%; /* Usa 90% da tela em vez de 80% */
+    }
+}

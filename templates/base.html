@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Django</title>
-    </head>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
 <body>
 
     <header>
+        <img src="{% static 'images/logo.svg' %}" alt="logo">
+
         <h1><a href="{% url 'post_list' %}">Portfólio Pessoal - Lucca Kherlakian</a></h1>
+
         <nav>
             <ul>
                 <li><a href="{% url 'post_list' %}">Home</a></li>
