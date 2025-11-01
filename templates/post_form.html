@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        <div>
+            <label for="titulo">Título:</label><br>
+            <input type="text" id="titulo" name="titulo" value="{{ post.titulo }}">
+        </div>
+        <br>
+        <div>
+            <label for="conteudo">Conteúdo:</label><br>
+            <textarea id="conteudo" name="conteudo" rows="10" cols="50">{{ post.conteudo }}</textarea>
+            <p><small>Você pode usar tags HTML aqui (ex: &lt;b&gt;negrito&lt;/b&gt;).</small></p>
+        </div>
+        <br>
+        <button type="submit">Salvar Post</button>
+    </form>
+
+{% endblock %}

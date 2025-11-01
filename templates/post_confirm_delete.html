@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <h2>Tem a certeza?</h2>
+        <p>Você está prestes a apagar o post: <strong>"{{ post.titulo }}"</strong>.</p>
+        <p>Esta ação não pode ser revertida.</p>
+
+        <button type="submit">Sim, apagar</button>
+
+        <a href="{% url 'post_detail' post.pk %}">Cancelar</a>
+    </form>
+
+{% endblock %}
