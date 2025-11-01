@@ -1,0 +1,12 @@
+# Arquivos do Django (Requisito da Entrega)
+db.sqlite3
+*.log
+
+# Python (Requisito da Entrega)
+__pycache__/
+
+# Ambiente Virtual
+venv/
+
+# Arquivos do VSCode
+.vscode/
