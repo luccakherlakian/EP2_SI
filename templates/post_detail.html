@@ -1,20 +1,36 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
     <article>
         <h2>{{ post.titulo }}</h2>
-
         <p>{{ post.data_postagem|date:"d M Y" }}</p>
-
         <div>
             {{ post.conteudo|safe }}
         </div>
     </article>
     <hr>
+
+    <div class="post-categories">
+        <strong>Categorias:</strong>
+        <ul>
+            {% for category in post.categorias.all %}
+                <li>
+                    <a href="{% url 'category_detail' category.pk %}">
+                        {{ category.nome }}
+                    </a>
+                </li>
+            {% empty %}
+                <li>Este post não tem categorias.</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <hr>
+
     <a href="{% url 'post_update' post.pk %}">Editar Post</a> | 
     <a href="{% url 'post_delete' post.pk %}">Apagar Post</a>
-
     <hr>
+
     <h3>Comentários</h3>
 
     <p><a href="{% url 'add_comment_to_post' post.pk %}">Adicionar Comentário</a></p>
