@@ -79,7 +79,6 @@ WSGI_APPLICATION = "portfolio.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
 DATABASE_URL = os.environ.get('DATABASE_URL')
 
 if DATABASE_URL:
@@ -94,7 +93,6 @@ else:
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
         }
-    }
     }
 
 
